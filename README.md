@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/article-preview-component-8km_4v7aUY)
+- Live Site URL: (https://effulgent-dieffenbachia-fbf36b.netlify.app/)
 
 ## My process
 
