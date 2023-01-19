@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+/* */
+:root {
+    --clr-primary-500: hsl(217, 19%, 35%);
+    --clr-primary-400: hsl(214, 17%, 51%);
+    --clr-primary-300: hsl(212, 23%, 69%);
+    --clr-primary-200:  hsl(210, 46%, 95%);
+
+    --clr-neutral-100:  hsl(0, 0%, 100%);
+
+    --ff-base: 'Manrope', sans-serif;
+
+    --fw-bold: 700;
+    --fw-regular: 500;
+}
+
+/*
+  CSS RESET
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/***********
+   main Css
+************/
+body {
+    --section-padding: 2rem;
+    margin: 5rem 1.5rem;
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-primary-400);
+    background-color: var(--clr-primary-200);
+
+    display: grid;
+}
+
+.container {
+    display: grid;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: var(--clr-neutral-100);
+}
+
+.section__head {
+    display: grid;
+    gap: 1rem;
+    padding: var(--section-padding);
+}
+
+.section h2 {
+    color: var(--clr-primary-500);
+    font-size: 1rem;
+    line-height: 2.5ch;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.person .info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info .info__img {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.info .info__prg{
+    color: var(--clr-primary-500);
+    font-weight: var(--fw-bold);
+}
+
+.info__prg span {
+    display: block;
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-regular);
+}
+
+.share__btn:hover {
+    cursor: pointer;
+    content: url("images/icon-share-1.svg");
+}
+
+.share {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--clr-primary-500);
+}
+
+.share__cont {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.share__prg {
+    font-size: 1rem;
+    letter-spacing: 0.5ch;
+    color: var(--clr-primary-300);
+    text-transform: uppercase;
+}
+.share__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social {
+    cursor: pointer;
+}
+
+.share__btn-clicked {
+    cursor: pointer;
+}
+
+.share__btn-clicked:hover {
+    content: url("images/icon-share.svg");
+}
+
+@media (min-width:47em) {
+    body {
+        --section-padding: 2rem;
+
+        font-family: var(--ff-base);
+        font-weight: var(--fw-regular);
+        font-size: 0.875rem;
+        color: var(--clr-primary-400);
+        background-color: var(--clr-primary-200);
+    
+        display: grid;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 10rem auto;
+        position: relative;
+        max-width: 80%;
+    }
+
+    .container .img {
+        min-height: 100%;
+    }
+
+    .section {
+        grid-column: 2/-1;
+        place-self: center;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .share {
+        position: absolute;
+        border-radius: 0.5rem;
+        width: 15rem;
+        left: 74%; /* 80%*/
+        bottom: 40%;
+        transform: translate(26%, 70%);
+        z-index: 10;
+    }
+
+    .share::before {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        border-color: var(--clr-primary-500) transparent  transparent transparent;
+        border-width: 0.75rem 0.75rem 0rem 0.75rem;
+        right: 50%;
+        bottom: 2%;
+        transform: translate(50%, 100%);
+        
+    } 
+
+    .share__btn-clicked {
+        display: none;
+    }
+}
+
+/*display: hidden !!!*/
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
