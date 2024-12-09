@@ -52,5 +52,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@Aboubakr06](https://www.frontendmentor.io/profile/Aboubakr06)
-- Twitter - [@elbouzidi99](https://twitter.com/elbouzidi99)
 
